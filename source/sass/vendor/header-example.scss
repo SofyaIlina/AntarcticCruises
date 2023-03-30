@@ -1,0 +1,134 @@
+.header-example {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 0;
+  z-index: 30;
+
+  &.is-open  {
+    left: 36px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    .is-open & {
+      z-index: 25;
+      color: #011c40;
+    }
+
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        color: #88abda;
+      }
+    }
+  }
+
+  &__nav {
+    @media (max-width: 767px) {
+       background-color: #f9fbfd;
+       bottom: 0;
+       display: flex;
+       flex-direction: column;
+       left: 0;
+       opacity: 0;
+       margin: 0;
+       padding: 75px 15px 20px;
+       position: fixed;
+       pointer-events: none;
+       top: 0;
+       transition: all 0.3s ease;
+       right: 0;
+       visibility: hidden;
+       z-index: 20;
+     }
+ 
+     .is-open & {
+       opacity: 1;
+       pointer-events: all;
+       visibility: visible;
+       margin-left: 36px;
+ 
+       .header-example__item {
+         opacity: 1;
+         transform: translateX(0);
+       }
+     }
+   }
+ 
+   &__list {
+    .is-open & {
+      grid-template-columns: auto;
+    }
+   }
+
+  &__item {
+   @media (max-width: 767px) {
+      display: flex;
+      opacity: 0;
+      transition: all ease-out 0.15s;
+      transform: translateX(-15px);
+    }
+  }
+
+  &__list a {
+    transition: color 0.3s ease;
+
+   @media (max-width: 767px) {
+      padding: 10px;
+      color: #011c40;
+      font-size: 18px;
+      line-height: 20px;
+    }
+
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        color: #88abda;
+      }
+    }
+  }
+
+  &__burger {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    border-top: 2px solid #f9fbfd;
+    border-bottom: 2px solid #f9fbfd;
+    width: 24px;
+    height: 14px;
+    padding: 0;
+    display: none;
+    position: relative;
+    z-index: 25;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 2px;
+      background-color: #f9fbfd;
+      top: auto;
+
+      .is-open & {
+        background: url('../img/sprite/icon-close.svg') center/contain;
+        width: 14px;
+        height: 14px;
+        right: 0;
+      }
+    }
+
+    @media (max-width: 767px) {
+      display: flex;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .is-open & {
+      border-color: transparent;
+    }
+  }
+}

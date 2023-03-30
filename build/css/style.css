@@ -384,6 +384,96 @@ template {
   display: none;
 }
 
+.header-example {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 0;
+  z-index: 30;
+}
+
+.header-example.is-open {
+  left: 36px;
+}
+
+.header-example .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.is-open .header-example__logo {
+  z-index: 25;
+  color: #011c40;
+}
+
+.is-open .header-example__nav {
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  margin-left: 36px;
+}
+
+.is-open .header-example__nav .header-example__item {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.is-open .header-example__list {
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+}
+
+.header-example__list a {
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header-example__burger {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid #f9fbfd;
+  border-bottom: 2px solid #f9fbfd;
+  width: 24px;
+  height: 14px;
+  padding: 0;
+  display: none;
+  position: relative;
+  z-index: 25;
+}
+
+.header-example__burger::before {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 2px;
+  background-color: #f9fbfd;
+  top: auto;
+}
+
+.is-open .header-example__burger::before {
+  background: url("../img/sprite/icon-close.svg") center/contain;
+  width: 14px;
+  height: 14px;
+  right: 0;
+}
+
+.is-open .header-example__burger {
+  border-color: transparent;
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -1315,16 +1405,20 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  min-height: 108px;
+  min-height: 72px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
 
 .header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: 30px;
   -ms-flex-negative: 1;
   flex-shrink: 1;
+  color: #f9fbfd;
 }
 
 .header__list {
@@ -1387,6 +1481,10 @@ button,
     padding: 0 45px;
   }
 
+  .header__container {
+    min-height: 40px;
+  }
+
   .header__logo svg {
     width: 38px;
     height: 20px;
@@ -1405,6 +1503,61 @@ button,
 }
 
 @media (max-width: 767px) {
+  .header-example__nav {
+    background-color: #f9fbfd;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    left: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 75px 15px 20px;
+    position: fixed;
+    pointer-events: none;
+    top: 0;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    right: 0;
+    visibility: hidden;
+    z-index: 20;
+  }
+
+  .header-example__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    -webkit-transition: all ease-out 0.15s;
+    -o-transition: all ease-out 0.15s;
+    transition: all ease-out 0.15s;
+    -webkit-transform: translateX(-15px);
+    -ms-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+
+  .header-example__list a {
+    padding: 10px;
+    color: #011c40;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .header-example__burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
   .container {
     padding: 0 15px;
   }
@@ -1422,13 +1575,13 @@ button,
     width: 100%;
   }
 
+  .header__container {
+    min-height: 20px;
+  }
+
   .header__logo svg {
     width: 42px;
     height: 22px;
-  }
-
-  .header__list {
-    display: none;
   }
 }
 
@@ -1496,6 +1649,14 @@ button,
 }
 
 @media (hover: hover) {
+  .header-example__logo:hover:not(.focus-visible) {
+    color: #88abda;
+  }
+
+  .header-example__list a:hover:not(.focus-visible) {
+    color: #88abda;
+  }
+
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
   }

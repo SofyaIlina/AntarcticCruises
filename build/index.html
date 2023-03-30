@@ -14,27 +14,30 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header">
+      <header class="header header-example" data-header>
         <div class="header__container container">
-          <a class="header__logo" href="index.html">
+          <a class="header__logo header-example__logo" href="index.html">
             <svg width="70" height="38" aria-label="Логотип сайта Круизы в Антарктику." focusable="false">
               <use href="img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <ul class="header__list reset-list">
-            <li class="header__item">
-              <a href="#">Преимущества</a>
-            </li>
-            <li class="header__item">
-              <a href="#">Направления</a>
-            </li>
-            <li class="header__item">
-              <a href="#">Ближайшие круизы</a>
-            </li>
-            <li class="header__item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
+          <nav class="header-example__nav">
+            <ul class="header__list header-example__list reset-list">
+              <li class="header__item header-example__item">
+                <a href="#">Преимущества</a>
+              </li>
+              <li class="header__item header-example__item">
+                <a href="#">Направления</a>
+              </li>
+              <li class="header__item header-example__item">
+                <a href="#">Ближайшие круизы</a>
+              </li>
+              <li class="header__item header-example__item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header-example__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger></button>
         </div>
       </header>
       <main>
