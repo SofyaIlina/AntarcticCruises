@@ -1,18 +1,14 @@
 .header-example {
   position: absolute;
   width: 100%;
-  background-color: #ffffff;
-  padding: 20px 0;
   z-index: 30;
+
+  @media (max-width: 767px) {
+    padding-top: 20px;
+  }
 
   &.is-open  {
     left: 36px;
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   &__logo {
@@ -46,20 +42,20 @@
        visibility: hidden;
        z-index: 20;
      }
- 
+
      .is-open & {
        opacity: 1;
        pointer-events: all;
        visibility: visible;
        margin-left: 36px;
- 
+
        .header-example__item {
          opacity: 1;
          transform: translateX(0);
        }
      }
    }
- 
+
    &__list {
     .is-open & {
       grid-template-columns: auto;
@@ -125,6 +121,7 @@
       display: flex;
       position: relative;
       transition: all 0.3s ease;
+      align-self: center;
     }
 
     .is-open & {
