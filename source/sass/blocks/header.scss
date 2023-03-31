@@ -1,5 +1,4 @@
 .header {
-  background-color: $color-tangaroa;
   color: $color-alice-blue;
 }
 
@@ -53,12 +52,14 @@
     line-height: 20px;
     padding-top: 48px;
     padding-bottom: 48px;
+    text-shadow: $shadow;
 
     @include vp-1023 {
       font-size: 14px;
       line-height: 17px;
       padding-top: 35px;
       padding-bottom: 35px;
+      text-shadow: none;
     }
   }
 }

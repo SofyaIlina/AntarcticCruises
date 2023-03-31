@@ -1380,7 +1380,6 @@ button,
 }
 
 .header {
-  background-color: #011c40;
   color: #f9fbfd;
 }
 
@@ -1424,6 +1423,7 @@ button,
   line-height: 20px;
   padding-top: 48px;
   padding-bottom: 48px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .footer {
@@ -1472,6 +1472,73 @@ button,
   display: flex;
   color: #f9fbfd;
   font-weight: 500;
+}
+
+.intro {
+  background: #011c40 url("../img/promo.jpg") center/cover;
+  color: #f9fbfd;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.intro__container {
+  padding-top: 283px;
+  padding-bottom: 60px;
+  min-height: 650px;
+}
+
+.intro h1 {
+  font-size: 54px;
+  line-height: 66px;
+  margin: 0;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.intro p {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 15px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.about {
+  background-color: #f9fbfd;
+}
+
+.about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-bottom: 145px;
+}
+
+.about__text-container {
+  max-width: 512px;
+  margin-right: 20px;
+}
+
+.about h2 {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 66px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  margin: 0;
+}
+
+.about img {
+  width: 324px;
+  height: 100%;
 }
 
 /* @mixin hover-focus {
@@ -1540,6 +1607,7 @@ button,
     line-height: 17px;
     padding-top: 35px;
     padding-bottom: 35px;
+    text-shadow: none;
   }
 
   .footer {
@@ -1583,6 +1651,45 @@ button,
   .footer__reddit svg {
     width: 16px;
     height: 16px;
+  }
+
+  .intro {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .intro__container {
+    padding-top: 280px;
+    min-height: 638px;
+  }
+
+  .intro h1 {
+    font-size: 50px;
+    line-height: 61px;
+    text-shadow: none;
+  }
+
+  .intro p {
+    font-size: 18px;
+    line-height: 22px;
+    text-shadow: none;
+  }
+
+  .about__container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .about__text-container {
+    max-width: 324px;
+  }
+
+  .about h2 {
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -1702,6 +1809,46 @@ button,
     row-gap: 17px;
     margin-bottom: 28px;
   }
+
+  .intro__container {
+    padding-top: 185px;
+    min-height: 500px;
+  }
+
+  .intro h1 {
+    font-size: 36px;
+    line-height: 45px;
+    margin-bottom: 25px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+
+  .about__container {
+    padding-top: 65px;
+    padding-bottom: 85px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .about__text-container {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin-bottom: 50px;
+  }
+
+  .about h2 {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .about img {
+    width: 290px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1793,5 +1940,11 @@ button,
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     color: #88abda;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url("../img/promo@2x.jpg");
   }
 }
