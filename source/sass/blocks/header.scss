@@ -39,7 +39,7 @@
   grid-template-columns: auto auto auto auto;
 
   @include vp-1023 {
-    column-gap: 23px;
+    column-gap: 24px;
   }
 }
 
@@ -50,15 +50,15 @@
     color: $color-alice-blue;
     font-weight: 500;
     line-height: 20px;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 45px;
+    padding-bottom: 45px;
     text-shadow: $shadow;
 
     @include vp-1023 {
       font-size: 14px;
       line-height: 17px;
-      padding-top: 35px;
-      padding-bottom: 35px;
+      padding-top: 32px;
+      padding-bottom: 32px;
       text-shadow: none;
     }
   }

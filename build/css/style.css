@@ -1421,8 +1421,8 @@ button,
   color: #f9fbfd;
   font-weight: 500;
   line-height: 20px;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 45px;
+  padding-bottom: 45px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -1482,7 +1482,8 @@ button,
 }
 
 .intro__container {
-  padding-top: 283px;
+  padding-top: 270px;
+  padding-left: 198px;
   padding-bottom: 60px;
   min-height: 650px;
 }
@@ -1491,7 +1492,7 @@ button,
   font-size: 54px;
   line-height: 66px;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -1528,17 +1529,12 @@ button,
   line-height: 42px;
   font-weight: 600;
   margin: 0;
-  margin-top: 66px;
-  margin-bottom: 40px;
+  margin-top: 56px;
+  margin-bottom: 24px;
 }
 
 .about p {
   margin: 0;
-}
-
-.about img {
-  width: 324px;
-  height: 100%;
 }
 
 /* @mixin hover-focus {
@@ -1597,16 +1593,16 @@ button,
   }
 
   .header__list {
-    -webkit-column-gap: 23px;
-    -moz-column-gap: 23px;
-    column-gap: 23px;
+    -webkit-column-gap: 24px;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
   }
 
   .header__item a {
     font-size: 14px;
     line-height: 17px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     text-shadow: none;
   }
 
@@ -1656,10 +1652,11 @@ button,
   .intro {
     -webkit-box-shadow: none;
     box-shadow: none;
+    background-image: url("../img/promo-tablet.jpg");
   }
 
   .intro__container {
-    padding-top: 280px;
+    padding-top: 268px;
     min-height: 638px;
   }
 
@@ -1687,9 +1684,20 @@ button,
   .about h2 {
     font-size: 26px;
     line-height: 36px;
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin-top: -9px;
+    margin-bottom: 15px;
     padding-right: 30px;
+  }
+
+  .about img {
+    width: 324px;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url("../img/promo-tablet@2x.jpg");
   }
 }
 
@@ -1810,24 +1818,30 @@ button,
     margin-bottom: 28px;
   }
 
+  .intro {
+    background-image: url("../img/promo-mobile.jpg");
+  }
+
   .intro__container {
-    padding-top: 185px;
+    padding-top: 175px;
     min-height: 500px;
   }
 
   .intro h1 {
     font-size: 36px;
     line-height: 45px;
-    margin-bottom: 25px;
+    margin-bottom: 12px;
   }
 
   .intro p {
     font-size: 16px;
+    padding-right: 60px;
   }
 
   .about__container {
     padding-top: 65px;
     padding-bottom: 85px;
+    padding-right: 4px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -1838,7 +1852,7 @@ button,
     max-width: -webkit-fit-content;
     max-width: -moz-fit-content;
     max-width: fit-content;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
 
   .about h2 {
@@ -1911,6 +1925,12 @@ button,
     -webkit-transform: translateY(calc(-50% - 5px));
     -ms-transform: translateY(calc(-50% - 5px));
     transform: translateY(calc(-50% - 5px));
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+  .intro {
+    background-image: url("../img/promo-mobile@2x.jpg");
   }
 }
 
