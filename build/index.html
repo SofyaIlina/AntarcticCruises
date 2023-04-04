@@ -14,30 +14,30 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header header-example" data-header>
+      <header class="header" data-header>
         <div class="header__container container">
-          <a class="header__logo header-example__logo" href="index.html">
+          <a class="header__logo" href="index.html">
             <svg width="70" height="38" aria-label="Логотип сайта Круизы в Антарктику." focusable="false">
               <use href="img/sprite.svg#logo"></use>
             </svg>
           </a>
-          <nav class="header-example__nav">
-            <ul class="header__list header-example__list reset-list">
-              <li class="header__item header-example__item">
-                <a href="#">Преимущества</a>
+          <nav class="header__nav">
+            <ul class="header__list reset-list">
+              <li class="header__item">
+                <a href="#features">Преимущества</a>
               </li>
-              <li class="header__item header-example__item">
+              <li class="header__item">
                 <a href="#">Направления</a>
               </li>
-              <li class="header__item header-example__item">
-                <a href="#">Ближайшие круизы</a>
+              <li class="header__item">
+                <a href="#catalog">Ближайшие круизы</a>
               </li>
-              <li class="header__item header-example__item">
-                <a href="#">Контакты</a>
+              <li class="header__item">
+                <a href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
-          <button class="header-example__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger></button>
+          <button class="header__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger></button>
         </div>
       </header>
       <main>
@@ -59,7 +59,7 @@
             </picture>
           </div>
         </section>
-        <section class="features">
+        <section class="features" id="features">
           <div class="features__container container">
             <h2>Преимущества</h2>
             <ul class="features__list reset-list">
@@ -78,13 +78,16 @@
             </ul>
           </div>
         </section>
-        <section class="catalog">
+        <section class="catalog" id="catalog">
           <div class="catalog__container container">
             <h2>Ближайшие круизы</h2>
             <ul class="catalog__list reset-list">
               <li class="catalog__item card-cruise">
                 <div class="card-cruise__cover">
-                  <img src="img/cruises/astoria.jpg" width="260" height="386" alt="Фото природы из путешествия в круизе Астория">
+                  <picture>
+                    <source type="image/webp" srcset="img/cruises/astoria.webp 1x, img/cruises/astoria@2x.webp 2x">
+                    <img src="img/cruises/astoria.jpg" srcset="img/cruises/astoria@2x.jpg 2x" width="260" height="386" alt="Фото природы из путешествия в круизе Астория">
+                  </picture>
                   <p>Круиз “Астория”</p>
                 </div>
                 <h3>Круиз “Астория”</h3>
@@ -120,7 +123,10 @@
                 </dl>
                 <a href="#">Забронировать</a>
                 <div class="card-cruise__cover">
-                  <img src="img/cruises/aurora.jpg" width="260" height="386" alt="Фото природы из путешествия в круизе Элайн">
+                  <picture>
+                    <source type="image/webp" srcset="img/cruises/aurora.webp 1x, img/cruises/aurora@2x.webp 2x">
+                    <img src="img/cruises/aurora.jpg" srcset="img/cruises/aurora@2x.jpg 2x" width="260" height="386" alt="Фото природы из путешествия в круизе Элайн">
+                  </picture>
                   <p>Круиз “Элайн”</p>
                 </div>
               </li>
@@ -141,7 +147,10 @@
                 </dl>
                 <a href="#">Забронировать</a>
                 <div class="card-cruise__cover">
-                  <img src="img/cruises/atlantis.jpg" width="260" height="386" alt="Фото природы из путешествия в круизе Атлантис">
+                  <picture>
+                    <source type="image/webp" srcset="img/cruises/atlantis.webp 1x, img/cruises/atlantis@2x.webp 2x">
+                    <img src="img/cruises/atlantis.jpg" srcset="img/cruises/atlantis@2x.jpg 2x" width="260" height="386" alt="Фото природы из путешествия в круизе Атлантис">
+                  </picture>
                   <p>Круиз “Атлантис”</p>
                 </div>
               </li>
@@ -162,7 +171,10 @@
                 </dl>
                 <a href="#">Забронировать</a>
                 <div class="card-cruise__cover">
-                  <img src="img/cruises/odysseus.jpg" width="260" height="386" alt="Фото природы из путешествия в круизе Одиссей">
+                  <picture>
+                    <source type="image/webp" srcset="img/cruises/odysseus.webp 1x, img/cruises/odysseus@2x.webp 2x">
+                    <img src="img/cruises/odysseus.jpg" srcset="img/cruises/odysseus@2x.jpg 2x" width="260" height="386" alt="Фото природы из путешествия в круизе Одиссей">
+                  </picture>
                   <p>Круиз “Одиссей”</p>
                 </div>
               </li>
@@ -183,7 +195,10 @@
                 </dl>
                 <a href="#">Забронировать</a>
                 <div class="card-cruise__cover">
-                  <img src="img/cruises/olympia.jpg" width="260" height="386" alt="Фото природы из путешествия в круизе Олимпия">
+                  <picture>
+                    <source type="image/webp" srcset="img/cruises/olympia.webp 1x, img/cruises/olympia@2x.webp 2x">
+                    <img src="img/cruises/olympia.jpg" srcset="img/cruises/olympia@2x.jpg 2x" width="260" height="386" alt="Фото природы из путешествия в круизе Олимпия">
+                  </picture>
                   <p>Круиз “Олимпия”</p>
                 </div>
               </li>
@@ -204,7 +219,10 @@
                 </dl>
                 <a href="#">Забронировать</a>
                 <div class="card-cruise__cover">
-                  <img src="img/cruises/aurora.jpg" width="260" height="386" alt="Фото природы из путешествия в круизе Аврора">
+                  <picture>
+                    <source type="image/webp" srcset="img/cruises/aurora.webp 1x, img/cruises/aurora@2x.webp 2x">
+                    <img src="img/cruises/aurora.jpg" srcset="img/cruises/aurora@2x.jpg 2x" width="260" height="386" alt="Фото природы из путешествия в круизе Аврора">
+                  </picture>
                   <p>Круиз “Аврора”</p>
                 </div>
               </li>
@@ -225,7 +243,10 @@
                 </dl>
                 <a href="#">Забронировать</a>
                 <div class="card-cruise__cover">
-                  <img src="img/cruises/leonor.jpg" width="260" height="386" alt="Фото природы из путешествия в круизе Леонор">
+                  <picture>
+                    <source type="image/webp" srcset="img/cruises/leonor.webp 1x, img/cruises/leonor@2x.webp 2x">
+                    <img src="img/cruises/leonor.jpg" srcset="img/cruises/leonor@2x.jpg 2x" width="260" height="386" alt="Фото природы из путешествия в круизе Леонор">
+                  </picture>
                   <p>Круиз “Леонор”</p>
                 </div>
               </li>
@@ -246,7 +267,10 @@
                 </dl>
                 <a href="#">Забронировать</a>
                 <div class="card-cruise__cover">
-                  <img src="img/cruises/minion-1.jpg" width="260" height="386" alt="Фото природы из путешествия в круизе Минион - 1">
+                  <picture>
+                    <source type="image/webp" srcset="img/cruises/minion-1.webp 1x, img/cruises/minion-1@2x.webp 2x">
+                    <img src="img/cruises/minion-1.jpg" srcset="img/cruises/minion-1@2x.jpg 2x" width="260" height="386" alt="Фото природы из путешествия в круизе Минион - 1">
+                  </picture>
                   <p>Круиз “Минион - 1”</p>
                 </div>
               </li>
@@ -254,7 +278,7 @@
           </div>
         </section>
         <section class="booking">
-          <div class="booking__container container">
+          <div class="booking__container container" data-form-validate>
             <div class="booking__description">
               <h2>Раннее бронирование</h2>
               <p>Забронируйте тур за&nbsp;3&minus;6&nbsp;месяцев <br>до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%</p>
@@ -262,13 +286,16 @@
             <form class="booking__form feedback" action="https://echo.htmlacademy.ru/" method="post">
               <h3>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время</h3>
               <div class="feedback__input-group">
-                <label>
+                <label data-validate-type="text" data-required
+                data-message-base="Поле обязательно к заполнению">
                   <input type="text" name="user-name" placeholder="Имя" required>
                 </label>
-                <label>
+                <label data-validate-type="phone" data-required
+                data-message-base="Поле обязательно к заполнению">
                   <input type="tel" name="user-phone" placeholder="Телефон" required>
                 </label>
-                <label>
+                <label data-validate-type="email" data-required
+                data-message-base="Поле обязательно к заполнению">
                   <input type="email" name="user-email" placeholder="Email" required>
                 </label>
               </div>
@@ -282,17 +309,14 @@
             </form>
           </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
           <div class="contacts__container container">
             <h2 class="visually-hidden">Контакты.</h2>
-            <div class="contacts__map" id="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037907470418!2d30.31856273415857!3d59.93871642390728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1680611652952!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            </div>
+            <div class="contacts__map" id="map"></div>
             <div class="contacts__text">
               <h3>У&nbsp;вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</h3>
               <a class="contacts__address" href="#">
-                <p>г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная, 19/8</p>
+                <p>г. Санкт Петербург, ул.&nbsp;Большая&nbsp;Конюшенная,&nbsp;19/8</p>
               </a>
               <a class="contacts__phone" href="tel:88002000000">
               <p>8-800-200-00-00</p>
@@ -311,16 +335,16 @@
           </a>
           <ul class="footer__nav-list reset-list">
             <li class="footer__item">
-              <a href="#">Преимущества</a>
+              <a href="#features">Преимущества</a>
             </li>
             <li class="footer__item">
               <a href="#">Направления</a>
             </li>
             <li class="footer__item">
-              <a href="#">Ближайшие круизы</a>
+              <a href="#catalog">Ближайшие круизы</a>
             </li>
             <li class="footer__item">
-              <a href="#">Контакты</a>
+              <a href="#contacts">Контакты</a>
             </li>
           </ul>
           <ul class="footer__social-list reset-list">

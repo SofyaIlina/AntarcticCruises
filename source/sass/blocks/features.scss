@@ -1,5 +1,17 @@
 .features {
-  background: $color-azureish-white url('../img/features.jpg') center/cover;
+  background: $color-polo-blue url("../img/features.jpg") center/cover;
+
+  @supports (background-image: url("../img/features.webp")) {
+    background-image: url("../img/features.webp");
+  }
+
+  @include retina {
+    background-image: url("../img/features@2x.jpg");
+
+    @supports (background-image: url("../img/features@2x.webp")) {
+      background-image: url("../img/features@2x.webp");
+    }
+  }
 }
 
 .features__container {
@@ -65,7 +77,7 @@
     width: 44px;
     height: 32px;
     top: 30px;
-    background: url('../img/sprite/liner.svg') left/contain no-repeat;
+    background: url("../img/sprite/liner.svg") left/contain no-repeat;
 
     @include vp-1023 {
       width: 36px;
@@ -81,11 +93,11 @@
   }
 
   &:nth-child(2)::before {
-    background-image: url('../img/sprite/all-inclusive.svg');
+    background-image: url("../img/sprite/all-inclusive.svg");
   }
 
   &:nth-child(3)::before {
-    background-image: url('../img/sprite/zodiac.svg');
+    background-image: url("../img/sprite/zodiac.svg");
   }
 }
 

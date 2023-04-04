@@ -5,6 +5,7 @@
   text-align: center;
   padding: 10px;
   line-height: 23px;
+  user-select: none;
 
   color: $color-tangaroa;
 
@@ -21,6 +22,6 @@
   }
 
   @include hover-focus {
-    background-color: $color-azureish-white;
+    background-color: $color-polo-blue;
   }
 }

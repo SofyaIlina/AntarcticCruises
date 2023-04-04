@@ -1,12 +1,50 @@
 .booking {
-  background: $color-azureish-white url('../img/booking.jpg') center/cover;
+  background: $color-polo-blue url("../img/booking.jpg") center/cover;
+
+  @supports (background-image: url("../img/booking.webp")) {
+    background-image: url("../img/booking.webp");
+  }
+
+  @media (min-width: 1024px) {
+    @include retina {
+      background-image: url("../img/booking@2x.jpg");
+
+      @supports (background-image: url("../img/booking@2x.webp")) {
+        background-image: url("../img/booking@2x.webp");
+      }
+    }
+  }
 
   @include vp-1023 {
-    background-image: url('../img/booking-tablet.jpg');
+    background-image: url("../img/booking-tablet.jpg");
+
+    @supports (background-image: url("../img/booking-tablet.webp")) {
+      background-image: url("../img/booking-tablet.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/booking-tablet@2x.jpg");
+
+      @supports (background-image: url("../img/booking-tablet@2x.webp")) {
+        background-image: url("../img/booking-tablet@2x.webp");
+      }
+    }
   }
 
   @include vp-767 {
-    background-image: url('../img/booking-mobile.jpg');
+    background-image: url("../img/booking-mobile.jpg");
+
+    @supports (background-image: url("../img/booking-mobile.webp")) {
+      background-image: url("../img/booking-mobile.webp");
+    }
+
+    @include retina {
+      background-image: url("../img/booking-mobile@2x.jpg");
+
+      @supports (background-image: url("../img/booking-mobile@2x.webp")) {
+        background-image: url("../img/booking-mobile@2x.webp");
+      }
+    }
   }
 }
 

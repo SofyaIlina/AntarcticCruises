@@ -1,5 +1,5 @@
 .intro {
-  background: $color-tangaroa url('../img/promo.jpg') center/cover;
+  background: $color-tangaroa url("../img/promo.jpg") center/cover;
   color: $color-alice-blue;
   box-shadow: $shadow;
 
@@ -9,25 +9,24 @@
 
   @media (min-width: 1024px) {
     @include retina {
-      background-image: url('../img/promo@2x.jpg');
+      background-image: url("../img/promo@2x.jpg");
 
       @supports (background-image: url("../img/promo@2x.webp")) {
         background-image: url("../img/promo@2x.webp");
       }
     }
   }
-  
 
   @include vp-1023 {
     box-shadow: none;
-    background-image: url('../img/promo-tablet.jpg');
+    background-image: url("../img/promo-tablet.jpg");
 
     @supports (background-image: url("../img/promo-tablet.webp")) {
       background-image: url("../img/promo-tablet.webp");
     }
 
     @include retina {
-      background-image: url('../img/promo-tablet@2x.jpg');
+      background-image: url("../img/promo-tablet@2x.jpg");
 
       @supports (background-image: url("../img/promo-tablet@2x.webp")) {
         background-image: url("../img/promo-tablet@2x.webp");
@@ -36,14 +35,14 @@
   }
 
   @include vp-767 {
-    background-image: url('../img/promo-mobile.jpg');
+    background-image: url("../img/promo-mobile.jpg");
 
     @supports (background-image: url("../img/promo-mobile.webp")) {
       background-image: url("../img/promo-mobile.webp");
     }
 
     @include retina {
-      background-image: url('../img/promo-mobile@2x.jpg');
+      background-image: url("../img/promo-mobile@2x.jpg");
 
       @supports (background-image: url("../img/promo-mobile@2x.webp")) {
         background-image: url("../img/promo-mobile@2x.webp");

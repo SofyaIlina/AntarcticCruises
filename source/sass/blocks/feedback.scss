@@ -37,6 +37,10 @@
     display: flex;
     width: 100%;
 
+    @include hover-focus {
+      background-color: $color-polo-blue;
+    }
+
     &::placeholder {
       font-size: 14px;
       color: $color-tangaroa;
@@ -44,8 +48,6 @@
     }
   }
 }
-
-
 
 .feedback__agreement {
   margin-bottom: 30px;
@@ -71,6 +73,10 @@
       margin-right: 8px;
     }
 
+    @include hover-focus {
+      background-color: $color-polo-blue;
+    }
+
     &:checked {
       &::before {
         content: "";
@@ -82,8 +88,12 @@
         right: 0;
         bottom: 0;
         margin: auto;
-        background: url('../img/sprite/icon-check.svg') center/contain no-repeat;
+        background: url("../img/sprite/icon-check.svg") center/contain no-repeat;
       }
+    }
+
+    &:not(:checked) + span {
+      color: rgb(213, 72, 53);
     }
   }
 
@@ -92,4 +102,3 @@
     line-height: 10px;
   }
 }
-

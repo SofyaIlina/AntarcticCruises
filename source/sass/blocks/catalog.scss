@@ -1,6 +1,4 @@
 .catalog {
-  background-color: $color-alice-blue;
-
   h2 {
     font-size: 28px;
     line-height: 42px;
@@ -35,6 +33,6 @@
 
 .catalog__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }

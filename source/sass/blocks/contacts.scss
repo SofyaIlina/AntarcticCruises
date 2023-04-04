@@ -19,6 +19,11 @@
 }
 
 .contacts__map {
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+
   @include vp-767 {
     height: 316px;
   }
@@ -56,20 +61,19 @@
 }
 
 .contacts a {
-  color: $color-tangaroa;
   position: relative;
   display: block;
   padding-left: 28px;
   margin-bottom: 21px;
 
   &::before {
-    content: '';
+    content: "";
     width: 18px;
     height: 22px;
     position: absolute;
     left: 0;
     bottom: 2px;
-    background-image: url('../img/sprite/map-mark.svg');
+    background-image: url("../img/sprite/map-mark.svg");
   }
 
   &.contacts__address::before {
@@ -80,13 +84,14 @@
 
   &.contacts__phone::before {
     height: 18px;
-    background-image: url('../img/sprite/icon-phone.svg');
+    background-image: url("../img/sprite/icon-phone.svg");
   }
 
   @include hover-focus {
-    color: $color-azureish-white;
+    color: $color-polo-blue;
   }
 }
+
 .contacts p {
   margin: 0;
 }
