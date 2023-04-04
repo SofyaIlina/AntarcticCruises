@@ -9,6 +9,14 @@
   &:hover &__cover {
     display: none;
   }
+
+  @include vp-1023 {
+    padding: 28px 35px 36px;
+  }
+
+  @include vp-767 {
+    padding: 29px 25px 37px;
+  }
 }
 
 .card-cruise h3 {
@@ -68,6 +76,7 @@
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   p {
@@ -78,5 +87,15 @@
     bottom: 30px;
     left: 30px;
     margin: 0;
+
+    @include vp-1023 {
+      left: 34px;
+      bottom: 27px;
+    }
+
+    @include vp-767 {
+      left: 25px;
+      bottom: 18px;
+    }
   }
 }
