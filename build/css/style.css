@@ -384,9 +384,9 @@ template {
   display: none;
 }
 
-ymaps a.ymaps-2-1-79-gototech,
-ymaps .ymaps-2-1-79-copyright__content,
-ymaps .ymaps-2-1-79-map-copyrights-promo {
+.contacts__map a.ymaps-2-1-79-gototech,
+.contacts__map .ymaps-2-1-79-copyright__content,
+.contacts__map .ymaps-2-1-79-map-copyrights-promo {
   display: none;
 }
 
@@ -1695,7 +1695,7 @@ button,
 }
 
 .card-cruise a {
-  font-size: 14px;
+  font-size: 54px;
   line-height: 20px;
   font-weight: 600;
   padding: 10px;
@@ -1706,6 +1706,7 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .card-cruise a.focus-visible:focus {
@@ -2068,6 +2069,7 @@ button,
   }
 
   .header__list {
+    padding-top: 0;
     -webkit-column-gap: 24px;
     -moz-column-gap: 24px;
     column-gap: 24px;
