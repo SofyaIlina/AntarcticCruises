@@ -1706,6 +1706,7 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .card-cruise a.focus-visible:focus {
@@ -1733,7 +1734,6 @@ button,
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 100;
 }
 
 .card-cruise__cover picture {
