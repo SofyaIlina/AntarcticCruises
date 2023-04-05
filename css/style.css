@@ -1669,6 +1669,10 @@ button,
   display: none;
 }
 
+.card-cruise:hover a {
+  pointer-events: auto;
+}
+
 .card-cruise h3 {
   font-size: 18px;
   font-weight: 500;
@@ -1695,7 +1699,7 @@ button,
 }
 
 .card-cruise a {
-  font-size: 54px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 600;
   padding: 10px;
@@ -1719,6 +1723,10 @@ button,
 
 .card-cruise a:focus + .card-cruise__cover {
   display: none;
+}
+
+.card-cruise a:focus {
+  pointer-events: auto;
 }
 
 .card-cruise__cover {
