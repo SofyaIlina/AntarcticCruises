@@ -384,6 +384,12 @@ template {
   display: none;
 }
 
+.contacts__map a.ymaps-2-1-79-gototech,
+.contacts__map .ymaps-2-1-79-copyright__content,
+.contacts__map .ymaps-2-1-79-map-copyrights-promo {
+  display: none;
+}
+
 @font-face {
   font-style: normal;
   font-weight: 400;
@@ -437,6 +443,7 @@ html {
   line-height: 24px;
   font-family: "Montserrat", "Arial", sans-serif;
   color: #011c40;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -445,12 +452,16 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #f9fbfd;
 }
 
 a {
-  color: #000000;
+  color: #011c40;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 img,
@@ -656,6 +667,10 @@ button,
   text-align: center;
   padding: 10px;
   line-height: 23px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   color: #011c40;
   background-color: #f9fbfd;
   border: none;
@@ -1361,6 +1376,7 @@ button,
   gap: 10px 33px;
   -ms-grid-columns: auto auto auto auto;
   grid-template-columns: auto auto auto auto;
+  padding-top: 35px;
 }
 
 .is-open .header__list {
@@ -1378,8 +1394,8 @@ button,
   color: #f9fbfd;
   font-weight: 500;
   line-height: 20px;
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
@@ -1435,9 +1451,6 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1455,6 +1468,7 @@ button,
   -ms-grid-columns: (auto)[4];
   grid-template-columns: repeat(4, auto);
   gap: 10px 33px;
+  margin-top: 8px;
   margin-right: auto;
 }
 
@@ -1464,6 +1478,7 @@ button,
   -ms-grid-columns: (auto)[3];
   grid-template-columns: repeat(3, auto);
   gap: 27px;
+  margin-top: 11px;
 }
 
 .footer a {
@@ -1472,6 +1487,10 @@ button,
   display: flex;
   color: #f9fbfd;
   font-weight: 500;
+}
+
+.footer a.focus-visible:focus {
+  color: #88abda;
 }
 
 .intro {
@@ -1510,10 +1529,6 @@ button,
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.about {
-  background-color: #f9fbfd;
-}
-
 .about__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1545,6 +1560,12 @@ button,
 
 .features {
   background: #88abda url("../img/features.jpg") center/cover;
+}
+
+@supports (background-image: url("../img/features.webp")) {
+  .features {
+    background-image: url("../img/features.webp");
+  }
 }
 
 .features__container {
@@ -1608,10 +1629,6 @@ button,
   font-size: 14px;
   line-height: 20px;
   margin: 0;
-}
-
-.catalog {
-  background-color: #f9fbfd;
 }
 
 .catalog h2 {
@@ -1699,6 +1716,10 @@ button,
   background-color: #88abda;
 }
 
+.card-cruise a:focus + .card-cruise__cover {
+  display: none;
+}
+
 .card-cruise__cover {
   position: absolute;
   display: -webkit-box;
@@ -1712,6 +1733,13 @@ button,
   height: 100%;
   left: 0;
   top: 0;
+}
+
+.card-cruise__cover picture {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .card-cruise__cover img {
@@ -1733,6 +1761,12 @@ button,
 
 .booking {
   background: #88abda url("../img/booking.jpg") center/cover;
+}
+
+@supports (background-image: url("../img/booking.webp")) {
+  .booking {
+    background-image: url("../img/booking.webp");
+  }
 }
 
 .booking__container {
@@ -1808,6 +1842,10 @@ button,
   width: 100%;
 }
 
+.feedback__input-group label input.focus-visible:focus {
+  background-color: #88abda;
+}
+
 .feedback__input-group label input::-webkit-input-placeholder {
   font-size: 14px;
   color: #011c40;
@@ -1865,6 +1903,10 @@ button,
   flex-shrink: 0;
 }
 
+.feedback__agreement input.focus-visible:focus {
+  background-color: #88abda;
+}
+
 .feedback__agreement input:checked::before {
   content: "";
   position: absolute;
@@ -1876,6 +1918,10 @@ button,
   bottom: 0;
   margin: auto;
   background: url("../img/sprite/icon-check.svg") center/contain no-repeat;
+}
+
+.feedback__agreement input:not(:checked) + span {
+  color: rgb(213, 72, 53);
 }
 
 .feedback__agreement span {
@@ -1915,7 +1961,6 @@ button,
 }
 
 .contacts a {
-  color: #011c40;
   position: relative;
   display: block;
   padding-left: 28px;
@@ -1996,6 +2041,16 @@ button,
       background-image: url("../img/promo@2x.webp");
     }
 }
+
+  .booking {
+    background-image: url("../img/booking@2x.jpg");
+  }
+
+@supports (background-image: url("../img/booking@2x.webp")) {
+    .booking {
+      background-image: url("../img/booking@2x.webp");
+    }
+}
 }
 
 @media (max-width: 1023px) {
@@ -2013,6 +2068,7 @@ button,
   }
 
   .header__list {
+    padding-top: 0;
     -webkit-column-gap: 24px;
     -moz-column-gap: 24px;
     column-gap: 24px;
@@ -2044,6 +2100,7 @@ button,
   }
 
   .footer__nav-list {
+    margin-top: 3px;
     -webkit-column-gap: 24px;
     -moz-column-gap: 24px;
     column-gap: 24px;
@@ -2051,15 +2108,16 @@ button,
 
   .footer__social-list {
     gap: 22px;
+    margin-top: 3px;
   }
 
-  .footer__social-list__ok svg {
+  .footer__social-list .footer__ok svg {
     width: 10px;
     height: 16px;
   }
 
-  .footer__social-list__dzen svg,
-  .footer__social-list__reddit svg {
+  .footer__social-list .footer__dzen svg,
+  .footer__social-list .footer__reddit svg {
     width: 16px;
     height: 16px;
   }
@@ -2173,6 +2231,12 @@ button,
     background-image: url("../img/booking-tablet.jpg");
   }
 
+@supports (background-image: url("../img/booking-tablet.webp")) {
+    .booking {
+      background-image: url("../img/booking-tablet.webp");
+    }
+}
+
   .booking__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2232,6 +2296,16 @@ button,
 @supports (background-image: url("../img/promo-tablet@2x.webp")) {
     .intro {
       background-image: url("../img/promo-tablet@2x.webp");
+    }
+}
+
+  .booking {
+    background-image: url("../img/booking-tablet@2x.jpg");
+  }
+
+@supports (background-image: url("../img/booking-tablet@2x.webp")) {
+    .booking {
+      background-image: url("../img/booking-tablet@2x.webp");
     }
 }
 }
@@ -2350,7 +2424,12 @@ button,
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     row-gap: 17px;
-    margin-bottom: 28px;
+    margin-top: 0;
+    margin-bottom: 26px;
+  }
+
+  .footer__social-list {
+    margin-top: 0;
   }
 
   .intro {
@@ -2448,6 +2527,12 @@ button,
   .booking {
     background-image: url("../img/booking-mobile.jpg");
   }
+
+@supports (background-image: url("../img/booking-mobile.webp")) {
+    .booking {
+      background-image: url("../img/booking-mobile.webp");
+    }
+}
 
   .booking__container {
     padding-top: 60px;
@@ -2583,6 +2668,16 @@ button,
       background-image: url("../img/promo-mobile@2x.webp");
     }
 }
+
+  .booking {
+    background-image: url("../img/booking-mobile@2x.jpg");
+  }
+
+@supports (background-image: url("../img/booking-mobile@2x.webp")) {
+    .booking {
+      background-image: url("../img/booking-mobile@2x.webp");
+    }
+}
 }
 
 @media (hover: hover) {
@@ -2607,9 +2702,6 @@ button,
   }
 
   .footer a:hover:not(.focus-visible) {
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     color: #88abda;
   }
 
@@ -2618,10 +2710,30 @@ button,
   }
 
   .card-cruise a:hover:not(.focus-visible) {
+    background-color: #88abda;
+  }
+
+  .feedback__input-group label input:hover:not(.focus-visible) {
+    background-color: #88abda;
+  }
+
+  .feedback__agreement input:hover:not(.focus-visible) {
     background-color: #88abda;
   }
 
   .contacts a:hover:not(.focus-visible) {
     color: #88abda;
   }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .features {
+    background-image: url("../img/features@2x.jpg");
+  }
+
+@supports (background-image: url("../img/features@2x.webp")) {
+    .features {
+      background-image: url("../img/features@2x.webp");
+    }
+}
 }
