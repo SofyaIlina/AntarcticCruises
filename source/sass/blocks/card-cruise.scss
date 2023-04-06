@@ -7,11 +7,7 @@
   padding: 30px 25px;
 
   &:hover &__cover {
-    display: none;
-  }
-
-  &:hover a {
-    pointer-events: auto;
+    visibility: hidden;
   }
 
   @include vp-1023 {
@@ -58,7 +54,6 @@
   background-color: $color-alice-blue;
   cursor: pointer;
   transition: opacity $trans-default;
-  pointer-events: none;
 
   @include hover-focus {
     background-color: $color-polo-blue;
@@ -69,11 +64,7 @@
   }
 
   &:focus + .card-cruise__cover {
-    display: none;
-  }
-
-  &:focus {
-    pointer-events: auto;
+    visibility: hidden;
   }
 }
 

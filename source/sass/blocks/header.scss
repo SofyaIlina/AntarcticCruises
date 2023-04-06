@@ -92,7 +92,7 @@
   padding-top: 35px;
 
   @include vp-1023 {
-    padding-top: 0;
+    padding-top: 22px;
     column-gap: 24px;
   }
 
@@ -123,8 +123,6 @@
     @include vp-1023 {
       font-size: 14px;
       line-height: 17px;
-      padding-top: 32px;
-      padding-bottom: 32px;
       text-shadow: none;
     }
 
