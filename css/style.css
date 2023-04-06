@@ -1666,11 +1666,7 @@ button,
 }
 
 .card-cruise:hover .card-cruise__cover {
-  display: none;
-}
-
-.card-cruise:hover a {
-  pointer-events: auto;
+  visibility: hidden;
 }
 
 .card-cruise h3 {
@@ -1710,7 +1706,6 @@ button,
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  pointer-events: none;
 }
 
 .card-cruise a.focus-visible:focus {
@@ -1722,11 +1717,7 @@ button,
 }
 
 .card-cruise a:focus + .card-cruise__cover {
-  display: none;
-}
-
-.card-cruise a:focus {
-  pointer-events: auto;
+  visibility: hidden;
 }
 
 .card-cruise__cover {
@@ -1936,6 +1927,7 @@ button,
 .feedback__agreement span {
   font-size: 10px;
   line-height: 10px;
+  cursor: pointer;
 }
 
 .contacts__container {
@@ -2077,7 +2069,7 @@ button,
   }
 
   .header__list {
-    padding-top: 0;
+    padding-top: 22px;
     -webkit-column-gap: 24px;
     -moz-column-gap: 24px;
     column-gap: 24px;
@@ -2086,8 +2078,6 @@ button,
   .header__item a {
     font-size: 14px;
     line-height: 17px;
-    padding-top: 32px;
-    padding-bottom: 32px;
     text-shadow: none;
   }
 
