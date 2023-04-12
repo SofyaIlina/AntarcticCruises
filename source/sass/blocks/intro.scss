@@ -36,6 +36,7 @@
 
   @include vp-767 {
     background-image: url("../img/promo-mobile.jpg");
+    background-position: bottom 27% left 50%;
 
     @supports (background-image: url("../img/promo-mobile.webp")) {
       background-image: url("../img/promo-mobile.webp");

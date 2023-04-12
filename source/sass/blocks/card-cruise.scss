@@ -1,83 +1,13 @@
 .card-cruise {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: $color-tangaroa;
   color: $color-alice-blue;
-  padding: 30px 25px;
 
-  &:hover &__cover {
-    visibility: hidden;
+  &:hover .card-cruise__image {
+    display: none;
   }
-
-  @include vp-1023 {
-    padding: 28px 35px 36px;
-  }
-
-  @include vp-767 {
-    padding: 29px 25px 37px;
-  }
-}
-
-.card-cruise h3 {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 27px;
-  margin: 0;
-  margin-bottom: 12px;
-}
-
-.card-cruise__list {
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0;
-  margin-bottom: 14px;
-
-  dt {
-    font-weight: 500;
-    margin-bottom: 1px;
-  }
-
-  dd {
-    margin: 0;
-    margin-bottom: 11px;
-  }
-}
-
-.card-cruise a {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 600;
-  padding: 10px;
-  text-align: center;
-  margin-top: auto;
-  background-color: $color-alice-blue;
-  cursor: pointer;
-  transition: opacity $trans-default;
-
-  @include hover-focus {
-    background-color: $color-polo-blue;
-  }
-
-  @include hover-focus {
-    background-color: $color-polo-blue;
-  }
-
-  &:focus + .card-cruise__cover {
-    visibility: hidden;
-  }
-}
-
-.card-cruise__cover {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
 
   picture {
+    position: relative;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -94,9 +24,10 @@
     line-height: 27px;
     font-weight: 500;
     position: absolute;
-    bottom: 30px;
+    bottom: 22px;
     left: 30px;
     margin: 0;
+    z-index: 10;
 
     @include vp-1023 {
       left: 34px;
@@ -105,7 +36,83 @@
 
     @include vp-767 {
       left: 25px;
-      bottom: 18px;
+      bottom: 17px;
     }
+  }
+}
+
+.card-cruise h3 {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include vp-767 {
+    margin-bottom: 13px;
+  }
+}
+
+.card-cruise__list {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+  margin-bottom: 14px;
+  overflow-y: scroll;
+
+  dt {
+    font-weight: 500;
+    margin-bottom: 1px;
+  }
+
+  dd {
+    margin: 0;
+    margin-bottom: 11px;
+  }
+}
+
+.card-cruise__cover {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-tangaroa;
+  padding: 30px 25px 35px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  @include vp-1023 {
+    padding: 28px 35px 36px;
+  }
+
+  @include vp-767 {
+    padding: 29px 25px 37px;
+  }
+}
+
+
+
+.card-cruise a {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  margin-top: auto;
+  background-color: $color-alice-blue;
+  cursor: pointer;
+  transition: opacity $trans-default;
+
+  &:focus ~ .card-cruise__image {
+    display: none;
+  }
+
+  @include hover-focus {
+    background-color: $color-polo-blue;
+  }
+
+  @include hover-focus {
+    background-color: $color-polo-blue;
   }
 }

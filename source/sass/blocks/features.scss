@@ -63,12 +63,12 @@
 }
 
 .features__item {
-  padding: 80px 30px 45px;
+  padding: 80px 30px 38px;
   background-color: $color-alice-blue;
   position: relative;
 
   @include vp-1023 {
-    padding: 68px 16px 20px 20px;
+    padding: 68px 16px 13px 20px;
   }
 
   &::before {
@@ -125,4 +125,5 @@
   font-size: 14px;
   line-height: 20px;
   margin: 0;
+  margin-bottom: 7px;
 }

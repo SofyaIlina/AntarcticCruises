@@ -1,33 +1,26 @@
 .about__container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   padding-top: 120px;
   padding-bottom: 145px;
 
   @include vp-1023 {
     padding-top: 100px;
     padding-bottom: 95px;
+    gap: 30px;
   }
 
   @include vp-767 {
     padding-top: 65px;
     padding-bottom: 85px;
-    padding-right: 4px;
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 
 .about__text-container {
-  max-width: 512px;
-  margin-right: 20px;
-
-  @include vp-1023 {
-    max-width: 324px;
-  }
-
   @include vp-767 {
-    max-width: fit-content;
-    margin-bottom: 45px;
+    margin-bottom: 15px;
   }
 }
 
@@ -44,7 +37,6 @@
     line-height: 36px;
     margin-top: -9px;
     margin-bottom: 15px;
-    padding-right: 30px;
   }
 
   @include vp-767 {
@@ -55,15 +47,23 @@
 
 .about p {
   margin: 0;
+  margin-right: 30px;
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
+}
+
+.about picture {
+  display: flex;
+  align-items: flex-start;
 }
 
 .about img {
-  @include vp-1023 {
-    width: 324px;
-    height: auto;
-  }
+  margin-top: auto;
+  width: 100%;
 
-  @include vp-767 {
-    width: 290px;
+  @include vp-1023 {
+    margin-top: 0;
   }
 }

@@ -16,6 +16,27 @@
 .header__container {
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+
+.header__overlay {
+  display: none;
+
+  .is-open & {
+    display: block;
+    position: absolute;
+    background-color: $overlay;
+    top: 0;
+    left: 0;
+    margin-top: -20px;
+    margin-left: -36px;
+
+    width: 100vw;
+    height: 100vh;
+
+    cursor: pointer;
+  }
+  
 }
 
 .header__logo {
@@ -98,6 +119,8 @@
 
   .is-open & {
     grid-template-columns: auto;
+    padding-top: 0;
+    overflow-y: scroll;
   }
 }
 
