@@ -1696,7 +1696,7 @@ button,
 }
 
 .card-cruise:hover .card-cruise__image {
-  display: none;
+  opacity: 0;
 }
 
 .card-cruise picture {
@@ -1760,7 +1760,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   background-color: #011c40;
-  padding: 30px 25px 35px;
+  padding: 30px 25px 75px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1774,24 +1774,27 @@ button,
   font-weight: 600;
   padding: 10px;
   text-align: center;
-  margin-top: auto;
   background-color: #f9fbfd;
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease;
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
+  position: absolute;
+  bottom: 35px;
+  left: 25px;
+  width: 81%;
 }
 
-.card-cruise a:focus ~ .card-cruise__image {
-  display: none;
-}
-
-.card-cruise a.focus-visible:focus {
+.card-cruise a:hover {
   background-color: #88abda;
 }
 
-.card-cruise a.focus-visible:focus {
+.card-cruise a:focus {
   background-color: #88abda;
+}
+
+.card-cruise a:focus + .card-cruise__image {
+  opacity: 0;
 }
 
 .booking {
@@ -2272,7 +2275,7 @@ button,
   }
 
   .card-cruise__cover {
-    padding: 28px 35px 36px;
+    padding: 28px 35px 76px;
   }
 
   .booking {
@@ -2575,7 +2578,7 @@ button,
   }
 
   .card-cruise__cover {
-    padding: 29px 25px 37px;
+    padding: 29px 25px 77px;
   }
 
   .booking {
@@ -2734,6 +2737,13 @@ button,
 }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-cruise a {
+    width: 77%;
+    left: 35px;
+  }
+}
+
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     background-color: #88abda;
@@ -2757,14 +2767,6 @@ button,
 
   .footer a:hover:not(.focus-visible) {
     color: #88abda;
-  }
-
-  .card-cruise a:hover:not(.focus-visible) {
-    background-color: #88abda;
-  }
-
-  .card-cruise a:hover:not(.focus-visible) {
-    background-color: #88abda;
   }
 
   .feedback__input-group label input:hover:not(.focus-visible) {
